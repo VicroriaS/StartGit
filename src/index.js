@@ -15,7 +15,7 @@ function todayDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[dayIndex];
 
@@ -33,17 +33,16 @@ function showWeather(response) {
   document.querySelector("#temperatureToday").innerHTML = Math.round(
     response.data.main.temp
   );
-  
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-document.querySelector("#descriptionToday").innerHTML =
+  document.querySelector("#descriptionToday").innerHTML =
     response.data.weather[0].main;
 }
-
 
 function searchCity(city) {
   let apiKey = "c03face7caa58a9b7ffa9f52b7238a93";
